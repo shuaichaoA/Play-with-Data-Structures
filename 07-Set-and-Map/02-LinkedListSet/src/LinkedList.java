@@ -105,7 +105,8 @@ public class LinkedList<E> {
     public boolean contains(E e){
         Node cur = dummyHead.next;
         while(cur != null){
-            if(cur.e.equals(e))
+            // e在前要不会报空指针异常
+            if(e.equals(cur.e))
                 return true;
             cur = cur.next;
         }
